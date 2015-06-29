@@ -36,7 +36,7 @@ function gamePlay(event) {
 			// event.target.setAttribute("class","x");
 			atBat.innerHTML = "X, you are up!";
 			theCounter++;
-			winnerCheck(oSquares, "");
+			winnerCheck(oSquares, "O");
 		} else {
 			xSquares.push(parseInt(event.target.getAttribute("data-square-val")));
 			event.target.innerHTML = "X";
@@ -62,18 +62,16 @@ function addResetListener() {
 }
 
 function winnerCheck(playerSquares, name) {
-	// loop over the first array of winning combinations
 	for (i = 0; i < winningCombinations.length; i++) {
-		// reset the winCounter each time!
-		winCounter = 0;
-		// loop over each individual array
-		for (var j = 0; j < winningCombinations[i].length; j++) {
-			// if the number in winning combo array is === a number in playerSquares array, add to winCounter
-			if (playerSquares.indexOf(winningCombinations[i][j]) !== -1) {
+		winCounter = 0;														// reset the winCounter each time!
+		
+		for (var j = 0; j < winningCombinations[i].length; j++) {			// loop over each individual array
+			
+			if (playerSquares.indexOf(winningCombinations[i][j]) !== -1) {	// if the number in winning combo array is === a number in playerSquares array, add to winCounter
 				winCounter++;
 			}
-			// if winCounter === 3 that means all 3 moves are winning combos and game is over!
-			if (winCounter === 3) {
+			
+			if (winCounter === 3) {											// if winCounter === 3 that means all 3 moves are winning combos and game is over!
 				atBat.innerHTML = name + " Wins!";
 				alert("Game over, " + name + " wins!");
 				resetBoard();
