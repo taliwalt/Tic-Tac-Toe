@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <title>Tic-Tac-Toe-Tali-Walt</title>
+</head>
+
+<body>
+    <div class="ga-header" id="content">
+        <div class="container">
+            <a href="#" target=""><img src="general-assembly-logo.png" alt="GA Logo" width="80px" height="80px" /></a>
+            <h1>WDI: Tic-Tac-Toe</h1>
+            <p>Build a tic-tac-toe game with Vanilla JavaScript</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="board">
+                <div>
+                    <span id="cell_top_left" class="square" data-square-val="0"></span>
+                    <span class="square" id="cell_top_center" data-square-val="1"></span>
+                    <span class="square" id="cell_top_right" data-square-val="2"></span>
+                </div><!-- tic-tac-toe-row1 -->
+                <div>
+                    <span class="square" id="cell_middle_left" data-square-val="3"></span>
+                    <span class="square" id="cell_middle_center" data-square-val="4"></span>
+                    <span class="square" id="cell_middle_right" data-square-val="5"></span>
+                </div><!-- tic-tac-toe-row2 -->
+                <div>
+                    <span class="square" id="cell_bottom_left" data-square-val="6"></span>
+                    <span class="square" id="cell_bottom_center" data-square-val="7"></span>
+                    <span class="square" id="cell_bottom_right" data-square-val="8"></span>
+                </div><!-- tic-tac-toe-row3 -->
+            </div><!-- board -->
+        </div><!--row -->
+        <div class="bottom row">
+            <p>At Bat: <span id="atBat">X, You're Up</span></p>
+            <p><input id="reset" class="btn btn-primary" type="button" value="Reset Game" /></p>
+            
+        </div><!-- row -->
+    </div><!-- container -->
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
